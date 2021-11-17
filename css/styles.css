@@ -92,17 +92,6 @@ body {
   padding-bottom: 32px;
 }
 
-.contacts-link {
-  display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: var(--main-text);
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
 .navigation-list {
   list-style: none;
   display: flex;
@@ -111,6 +100,8 @@ body {
 }
 .navigation-list-items {
   display: flex;
+  align-content: center;
+  justify-content: center;
 }
 .navigation-list .navigation-list-items + .navigation-list-items {
   margin-left: 50px;
@@ -124,11 +115,28 @@ body {
 }
 .contacts-list-items {
   display: flex;
+  align-content: center;
 }
 .contacts-list .contacts-list-items + .contacts-list-items {
   margin-left: 50px;
 }
-
+.contacts-link {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--main-text);
+}
+.icon-envelope {
+  margin-right: 10px;
+  align-self: center;
+}
+.icon-smartphone {
+  margin-right: 10px;
+  align-self: center;
+}
 .logo-studio {
   color: var(--logo-text);
   font-family: Raleway;
@@ -154,6 +162,15 @@ body {
   background-color: var(--hero-background);
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/overlay.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .cont-hero {
   flex-direction: column;
@@ -198,6 +215,13 @@ body {
 }
 
 /* section 2 */
+.icon-box {
+  display: flex;
+  height: 120px;
+  background-color: var(--section4-bckgnd);
+  margin-bottom: 30px;
+  padding: 25px 0;
+}
 
 .section2-title {
   position: absolute;
@@ -220,6 +244,8 @@ body {
 
 .sec2-list-item {
   width: 270px;
+  display: flex;
+  flex-direction: column;
 }
 
 .section2-list .sec2-list-item + .sec2-list-item {
@@ -324,7 +350,19 @@ body {
   display: block;
   height: auto;
 }
-
+.social-list {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 30px;
+}
+.social-icons {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  background-position: 10px 10px;
+}
 /* footer */
 .foot {
   background-color: var(--hero-background);
