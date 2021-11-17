@@ -9,6 +9,7 @@
   --section4-bckgnd: #f5f4fa;
   --header-border: #ececec;
   --projects-border: #eeeeee;
+  --icon-unactive: #afb1b8;
 }
 
 h1,
@@ -35,7 +36,7 @@ body {
   box-sizing: border-box;
 }
 
-/* HEADER */
+/* -----------------------------------HEADER----------------------------------- */
 .container {
   display: flex;
   width: 1200px;
@@ -117,6 +118,13 @@ body {
   display: flex;
   align-content: center;
 }
+.icon-envelope:hover,
+.icon-envelope:focus,
+.icon-smartphone:hover,
+.icon-smartphone:focus {
+  cursor: pointer;
+  fill: var(--accent);
+}
 .contacts-list .contacts-list-items + .contacts-list-items {
   margin-left: 50px;
 }
@@ -129,13 +137,20 @@ body {
   text-decoration: none;
   color: var(--main-text);
 }
+.contacts-link:hover {
+  fill: var(--accent);
+  color: var(--accent);
+}
+
 .icon-envelope {
   margin-right: 10px;
+  fill: var(--main-text);
   align-self: center;
 }
 .icon-smartphone {
   margin-right: 10px;
   align-self: center;
+  fill: var(--main-text);
 }
 .logo-studio {
   color: var(--logo-text);
@@ -148,15 +163,13 @@ body {
 .current:hover,
 .current:focus,
 .navigation-link:hover,
-.navigation-link:focus,
-.contacts-link:hover,
-.contacts-link:focus {
+.navigation-link:focus {
   color: var(--accent);
 }
 
-/* BODY */
+/* -----------------------------------BODY----------------------------------- */
 
-/* section 1 */
+/* ---------------------------------- SECTION 1 ------------------------------ */
 .hero {
   display: flex;
   background-color: var(--hero-background);
@@ -214,7 +227,7 @@ body {
   color: var(--background);
 }
 
-/* section 2 */
+/* ---------------------------------- SECTION 2 ------------------------------ */
 .icon-box {
   display: flex;
   height: 120px;
@@ -266,7 +279,7 @@ body {
   color: var(--main-text);
 }
 
-/* section 3 */
+/* ---------------------------------- SECTION 3 ------------------------------ */
 .section3 {
   padding-top: 0;
 }
@@ -296,7 +309,7 @@ body {
   display: block;
   height: auto;
 }
-/* section4 */
+/* ------------------------------------ SECTION 4 ------------------------------ */
 .section4 {
   background-color: var(--section4-bckgnd);
 }
@@ -322,6 +335,10 @@ body {
 .section4-list-item {
   list-style: none;
   background-color: var(--background);
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .section4-text {
   padding-bottom: 30px;
@@ -355,15 +372,77 @@ body {
   align-content: center;
   justify-content: center;
   list-style: none;
-  margin-bottom: 30px;
 }
-.social-icons {
-  display: flex;
+.social-list-item {
   width: 44px;
   height: 44px;
-  background-position: 10px 10px;
+  cursor: pointer;
+  padding: 12px;
+  margin-right: 10px;
 }
-/* footer */
+.social-list-item:last-child {
+  margin-right: 0;
+}
+.social-icons {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  fill: var(--icon-unactive);
+}
+.social-list-item:hover,
+.social-list-item:focus {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+/* ------------------------------------SECTION 5-------------------------------- */
+.cont5 {
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+}
+.section5-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+  list-style: none;
+}
+
+.clients-list-items {
+  display: flex;
+  align-content: center;
+  justify-self: center;
+}
+.clients-link {
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid var(--icon-unactive);
+  border-radius: 4px;
+  margin-right: 30px;
+}
+.clients-list-items:last-child {
+  margin-right: 0;
+}
+
+.clients-icons {
+  fill: var(--icon-unactive);
+  background-position: center;
+}
+.clients-icons:hover,
+.clients-icons:focus {
+  fill: var(--accent);
+}
+
+/* ------------------------------------ FOOTER --------------------------------- */
 .foot {
   background-color: var(--hero-background);
   padding-top: 60px;
