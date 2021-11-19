@@ -130,6 +130,7 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--main-text);
+  padding: 32px 0;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -250,10 +251,6 @@ body {
   justify-content: center;
 }
 
-.sec2-list-item {
-  margin-right: 30px;
-}
-
 .section2-list .sec2-list-item + .sec2-list-item {
   margin-left: 30px;
 }
@@ -322,19 +319,21 @@ body {
   margin-left: auto;
   display: flex;
 }
-.section4-list .section4-list-item + .section4-list-item {
-  margin-left: 30px;
-}
+
 .section4-list-item {
   list-style: none;
+  margin-right: 30px;
   background-color: var(--background);
   padding-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.section4-list-item:last-child {
+  margin-right: 0;
+}
 .section4-text {
-  padding-bottom: 30px;
+  padding-bottom: 16px;
   padding-top: 30px;
   padding-right: auto;
   padding-left: auto;
@@ -354,7 +353,6 @@ body {
   display: flex;
   justify-content: center;
   color: var(--main-text);
-  margin-bottom: 16px;
 }
 .section4-img {
   max-width: 100%;
@@ -382,7 +380,11 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
+  fill: var(--icon-unactive);
   color: var(--background);
+}
+.social-icons {
+  align-self: center;
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -390,26 +392,18 @@ body {
   border-radius: 50%;
   fill: currentColor;
 }
-.social-icons {
-  align-self: center;
-  fill: var(--icon-unactive);
-}
 
 /* --------------------------------------------------- */
 
 /* ------------------------------------SECTION 5-------------------------------- */
+.section5 {
+  padding-top: 47px;
+}
+
 .cont5 {
   flex-direction: column;
 }
-.qqq {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  justify-content: center;
-  align-items: center;
-  background-color: tomato;
-  border-radius: 50%;
-}
+
 .section5-title {
   font-weight: 700;
   font-size: 36px;
@@ -435,25 +429,18 @@ body {
 .clients-link {
   width: 170px;
   height: 92px;
-  border: 0;
   display: flex;
   cursor: pointer;
   border: 1px solid var(--icon-unactive);
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  fill: var(--icon-unactive);
 }
 .clients-link:hover,
 .clients-link:focus {
   fill: var(--accent);
-}
-.clients-icons {
-  fill: var(--icon-unactive);
-}
-
-.clients-icons:hover,
-.clients-icons:focus {
-  fill: var(--accent);
+  border: 1px solid var(--accent);
 }
 
 /* ------------------------------------ FOOTER --------------------------------- */
@@ -544,29 +531,33 @@ body {
   list-style: none;
 }
 .social-list-item-ftr {
+  display: flex;
   width: 44px;
   height: 44px;
-  cursor: pointer;
-  padding: 12px;
   margin-right: 10px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
   border-radius: 50%;
+}
+.socia-link-ftr {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  fill: var(--background);
+  color: var(--background);
+}
+.socia-link-ftr:hover,
+.socia-link-ftr:focus {
+  background-color: var(--accent);
+  border-radius: 50%;
+  fill: var(--background);
 }
 .social-list-item-ftr:last-child {
   margin-right: 0;
 }
 .social-icons-ftr {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  fill: var(--background);
-}
-.social-list-item-ftr:hover,
-.social-list-item-ftr:focus {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--accent);
+  align-self: center;
 }
 
 /* --------------------------------------PORTFOLIO---------------------------------*/
