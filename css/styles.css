@@ -223,11 +223,12 @@ body {
 
 /* ---------------------------------- SECTION 2 ------------------------------ */
 .icon-box {
-  display: flex;
+  width: 270px;
   height: 120px;
+  display: flex;
   background-color: var(--section4-bckgnd);
   margin-bottom: 30px;
-  padding: 25px 0;
+  padding: 25px 100px;
 }
 
 .section2-title {
@@ -250,9 +251,7 @@ body {
 }
 
 .sec2-list-item {
-  width: 270px;
-  display: flex;
-  flex-direction: column;
+  margin-right: 30px;
 }
 
 .section2-list .sec2-list-item + .sec2-list-item {
@@ -363,47 +362,53 @@ body {
   height: auto;
 }
 .social-list {
-  display: flex;
-  align-content: center;
-  justify-content: center;
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
+/* -------------------------------------------------- */
 .social-list-item {
+  display: flex;
+  width: 44px;
+  height: 44px;
   margin-right: 10px;
-  padding: 12px;
-}
-.social-list-item:hover,
-.social-list-item:focus {
-  background-color: var(--accent);
-  border-radius: 50%;
 }
 .social-list-item:last-child {
   margin-right: 0;
 }
 .social-list-link {
-  width: 44px;
-  height: 44px;
-  fill: var(--icon-unactive);
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--background);
 }
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: var(--accent);
   border-radius: 50%;
-  fill: var(--background);
-  border-radius: 50%;
+  fill: currentColor;
 }
 .social-icons {
-  display: flex;
-  width: 20px;
-  height: 20px;
+  align-self: center;
+  fill: var(--icon-unactive);
 }
+
+/* --------------------------------------------------- */
 
 /* ------------------------------------SECTION 5-------------------------------- */
 .cont5 {
   flex-direction: column;
-  /* align-items: center;
-  justify-content: center; */
+}
+.qqq {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+  border-radius: 50%;
 }
 .section5-title {
   font-weight: 700;
@@ -428,26 +433,21 @@ body {
 }
 
 .clients-link {
+  width: 170px;
+  height: 92px;
   border: 0;
   display: flex;
   cursor: pointer;
   border: 1px solid var(--icon-unactive);
   border-radius: 4px;
-
+  justify-content: center;
+  align-items: center;
 }
 .clients-link:hover,
 .clients-link:focus {
-  fill: currentColor;
+  fill: var(--accent);
 }
 .clients-icons {
-  width: 170px;
-  height: 92px;
-  background-size: auto;
-  padding: 16px 32px;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  background-position: center;
   fill: var(--icon-unactive);
 }
 
