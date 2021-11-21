@@ -193,7 +193,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--background);
-  width: 700px;
+  width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -229,6 +229,7 @@ body {
   height: 120px;
   background-color: var(--section4-bckgnd);
   margin-bottom: 30px;
+  justify-content: center;
 }
 .icon-box {
   align-self: center;
@@ -563,7 +564,11 @@ body {
 }
 
 /* --------------------------------------PORTFOLIO---------------------------------*/
-
+.cont-portfolio {
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
 .portfolio-title {
   position: absolute;
   width: 1px;
@@ -576,13 +581,8 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 /*---------------------------------------- FILTERS ----------------------------------*/
-.cont-filters {
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .filters-list {
   background-color: var(--background);
   display: flex;
@@ -621,10 +621,14 @@ body {
 }
 
 /* --------------------------------------- PROJECTS -------------------------------------*/
-.cont-projects {
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
+.projects-link {
+  text-decoration: none;
+  color: var(--main-h2h3);
+}
+.projects-link:focus .projects-list-item,
+.projects-link:hover .projects-list-item {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .projects-list {
   list-style: none;
@@ -638,16 +642,8 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-
-.projects-button {
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-}
-.projects-button:hover,
-.projects-button:focus {
+.projects-list-item:hover,
+.projects-list-item:focus {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -659,10 +655,6 @@ body {
   margin-right: 0px;
 }
 .projects-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding: 20px 24px;
   border-bottom: 1px solid var(--header-border);
   border-left: 1px solid var(--header-border);
