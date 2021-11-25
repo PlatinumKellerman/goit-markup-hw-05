@@ -67,6 +67,9 @@ body {
   letter-spacing: 0.02em;
   color: var(--accent);
   text-decoration: none;
+  transition: color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
 }
 .navigation {
   display: flex;
@@ -94,6 +97,9 @@ body {
   color: var(--main-h2h3);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
 }
 
 .navigation-list {
@@ -134,6 +140,9 @@ body {
   text-decoration: none;
   color: var(--main-text);
   padding: 32px 0;
+  transition: color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -403,6 +412,10 @@ body {
   height: 100%;
   fill: var(--icon-unactive);
   color: var(--background);
+  border-radius: 50%;
+  transition-property: background-color, fill, border-radius;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
 }
 .social-icons {
   align-self: center;
@@ -410,7 +423,7 @@ body {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: var(--accent);
-  border-radius: 50%;
+
   fill: currentColor;
 }
 
@@ -453,6 +466,9 @@ body {
   justify-content: center;
   align-items: center;
   fill: var(--icon-unactive);
+  transition-property: fill, border-color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -509,6 +525,9 @@ body {
   line-height: 1.71;
   font-style: normal;
   color: var(--background);
+  transition-property: color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
 }
 .foot-adrs:hover,
 .foot-adrs:focus,
@@ -518,6 +537,9 @@ body {
 
 .foot-contacts {
   color: var(--footer);
+  transition-property: color;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
 }
 .foot-contacts:hover,
 .foot-contacts:focus,
@@ -568,11 +590,14 @@ body {
   cursor: pointer;
   fill: var(--background);
   color: var(--background);
+  border-radius: 50%;
+  transition-property: background-color, fill, border-radius;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
 }
 .socia-link-ftr:hover,
 .socia-link-ftr:focus {
   background-color: var(--accent);
-  border-radius: 50%;
   fill: var(--background);
 }
 .social-list-item-ftr:last-child {
@@ -624,10 +649,16 @@ body {
   border: none;
   border-radius: 4px;
   padding: 6px 22px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
 }
 .filters-list-button.active-button {
   color: var(--background);
   background-color: var(--accent);
+  transition-property: box-shadow;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
 }
 
 .filters-list-button:hover,
@@ -671,18 +702,20 @@ body {
   overflow: hidden;
 }
 .overlay {
-  position: absolute;
   display: block;
+  position: absolute;
+  /* top: 150%; */
   width: 100%;
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
   padding: 63px 24px;
-  opacity: 0;
+  opacity: 1;
   color: var(--background);
   background-image: linear-gradient(to right, rgba(33, 150, 243, 0.9), rgba(33, 150, 243, 0.9));
   transition-property: transform;
-  transform: translateY(100%);
+  transform: translateY(-210%);
+  transition-timing-function: var(--cubic);
   transition-duration: var(--transition-time);
 }
 .projects-link {
@@ -697,17 +730,17 @@ body {
 }
 .projects-link:focus .overlay,
 .projects-link:hover .overlay {
-  transform: translateY(-100%);
   opacity: 1;
+  transition-property: transform;
 }
-
+.projects-text {
+  padding: 20px 24px;
+}
 .projects-list-subtitle {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  padding-top: 20px;
-  padding-left: 24px;
   margin-bottom: 4px;
   border-bottom: 1px solid var(--header-border);
   border-left: 1px solid var(--header-border);
@@ -717,8 +750,6 @@ body {
   font-size: 16px;
   line-height: 1.87;
   color: var(--main-text);
-  padding-left: 24px;
-  padding-bottom: 20px;
   border-bottom: 1px solid var(--header-border);
   border-left: 1px solid var(--header-border);
   border-right: 1px solid var(--header-border);
