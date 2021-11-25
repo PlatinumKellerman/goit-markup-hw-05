@@ -11,6 +11,8 @@
   --projects-border: #eeeeee;
   --icon-unactive: #afb1b8;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-time: 250ms;
+  --transformY: transform;
 }
 
 h1,
@@ -638,16 +640,7 @@ body {
 }
 
 /* --------------------------------------- PROJECTS -------------------------------------*/
-.projects-link {
-  display: block;
-  text-decoration: none;
-  color: var(--main-h2h3);
-}
-.projects-link:focus,
-.projects-link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 .projects-list {
   list-style: none;
   display: flex;
@@ -674,40 +667,61 @@ body {
   margin-right: 0px;
 }
 .projects-thumb {
-  display: block;
-  width: 370px;
+  position: relative;
+  overflow: hidden;
 }
-.thumb-text {
+.overlay {
+  position: absolute;
   display: block;
   width: 100%;
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
+  padding: 63px 24px;
+  opacity: 0;
   color: var(--background);
-  position: absolute;
   background-image: linear-gradient(to right, rgba(33, 150, 243, 0.9), rgba(33, 150, 243, 0.9));
-}
-.first-label:hover .thumb-text {
-  opacity: 1;
   transition-property: transform;
+  transform: translateY(100%);
+  transition-duration: var(--transition-time);
+}
+.projects-link {
+  display: block;
+  text-decoration: none;
+  color: var(--main-h2h3);
+}
+.projects-link:focus,
+.projects-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.projects-link:focus .overlay,
+.projects-link:hover .overlay {
+  transform: translateY(-100%);
+  opacity: 1;
 }
 
-.projects-text {
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--header-border);
-  border-left: 1px solid var(--header-border);
-  border-right: 1px solid var(--header-border);
-}
 .projects-list-subtitle {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  padding-top: 20px;
+  padding-left: 24px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--header-border);
+  border-left: 1px solid var(--header-border);
+  border-right: 1px solid var(--header-border);
 }
 .projects-list-text {
   font-size: 16px;
   line-height: 1.87;
   color: var(--main-text);
+  padding-left: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--header-border);
+  border-left: 1px solid var(--header-border);
+  border-right: 1px solid var(--header-border);
 }
 .projects-img {
   max-width: 100%;
