@@ -435,7 +435,6 @@ body {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: var(--accent);
-
   fill: currentColor;
 }
 
@@ -770,45 +769,54 @@ body {
   display: block;
   height: auto;
 }
-
+/*--------------------------------- MODAL -------------------------------*/
 .backdrop {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(23, 26, 36, 0.2);
   position: fixed;
   top: 0;
   left: 0;
-  transition: opacity 300ms, visibility 300ms;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 350ms, visibility 350ms;
 }
 .backdrop.is-hidden .modal {
-  transform: scale(1.5) rotate(270deg) translate(100px, 100px);
+  transform: scale(0.01);
 }
 
 .modal {
-  width: 500px;
-  min-height: 500px;
-  background-color: var(--hero-background);
-  border-radius: 5px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: scale(1) rotate(0) translate(-50%, -50%);
-  transition: transform 300ms;
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--background);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition-property: transform;
+  transition-duration: 350ms;
+  transform: scale(1) translate(-50%, -50%);
 }
-
 .modal-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
-  background-color: transparent;
-  border: 1px solid #999999;
+  background-color: var(--background);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition-property: border;
+  transition-duration: 350ms;
+  transition-timing-function: var(--cubic);
+}
+.modal-close:hover,
+.modal-close:focus {
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .is-hidden {
