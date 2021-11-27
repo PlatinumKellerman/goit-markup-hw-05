@@ -778,6 +778,7 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 350ms, visibility 350ms;
+  pointer-events: visible;
 }
 .backdrop.is-hidden .modal {
   transform: scale(0.01);
