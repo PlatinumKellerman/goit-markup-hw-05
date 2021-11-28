@@ -781,7 +781,7 @@ body {
   pointer-events: visible;
 }
 .backdrop.is-hidden .modal {
-  transform: scale(0.01);
+  transform: scale(0.01) translate(100%, 20%);
 }
 
 .modal {
